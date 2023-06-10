@@ -32,6 +32,16 @@
 			<artifactId>spring-kafka</artifactId>
 			<version>3.0.7</version>
 		</dependency>
+		<dependency>
+			<groupId>com.djaytech</groupId>
+			<artifactId>common-config</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.djaytech</groupId>
+			<artifactId>app-config-data</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<build>
