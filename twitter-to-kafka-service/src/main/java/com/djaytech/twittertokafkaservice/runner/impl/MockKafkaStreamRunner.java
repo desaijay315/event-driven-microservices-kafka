@@ -1,6 +1,6 @@
 package com.djaytech.twittertokafkaservice.runner.impl;
 
-import com.djaytech.twittertokafkaservice.config.TwitterToKafkaServiceConfigData;
+import com.djaytech.appconfigdata.config.TwitterToKafkaServiceConfigData;
 import com.djaytech.twittertokafkaservice.exception.TwitterToKafkaServiceException;
 import com.djaytech.twittertokafkaservice.listener.TwitterKafkaStatusListener;
 import com.djaytech.twittertokafkaservice.runner.StreamRunner;

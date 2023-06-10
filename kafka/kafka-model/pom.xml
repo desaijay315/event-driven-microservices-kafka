@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.djaytech</groupId>
-	<artifactId>twitter-to-kafka-service</artifactId>
+	<artifactId>kafka-model</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>twitter-to-kafka-service</name>
-	<description>twitter-to-kafka-service</description>
+	<name>kafka-model</name>
+	<description>kafka-model</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -27,21 +27,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
-		</dependency>
-		<dependency>
-			<groupId>org.twitter4j</groupId>
-			<artifactId>twitter4j-stream</artifactId>
-			<version>4.0.7</version>
-		</dependency>
-		<dependency>
-			<groupId>com.djaytech</groupId>
-			<artifactId>app-config-data</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -49,14 +34,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
