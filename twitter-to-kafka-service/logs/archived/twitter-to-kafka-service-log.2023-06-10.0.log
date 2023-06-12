@@ -1,0 +1,9 @@
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication using Java 11.0.18 on DESKTOP-E45J5HG with PID 31028 (C:\Users\desai\Desktop\projects\Java\microservices-demo\twitter-to-kafka-service\target\classes started by desai in C:\Users\desai\Desktop\projects\Java\microservices-demo)
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.014 seconds (JVM running for 2.24)
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - App starts...
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2023-06-10 16:19:32 [main] INFO  c.d.t.TwitterToKafkaServiceApplication - Simple microservices project
+2023-06-10 16:19:32 [main] INFO  c.d.t.r.impl.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Kafka, Elasticsearch]
+2023-06-10 16:19:32 [pool-1-thread-1] INFO  c.d.t.l.TwitterKafkaStatusListener - Twitter status with text Fusce elit sit Fusce purus libero Microservices amet adipiscing libero congue
+2023-06-10 16:19:42 [pool-1-thread-1] INFO  c.d.t.l.TwitterKafkaStatusListener - Twitter status with text libero Maecenas dolor purus Maecenas libero lectus elit Elasticsearch ultricies libero adipiscing Lorem lectus ipsum

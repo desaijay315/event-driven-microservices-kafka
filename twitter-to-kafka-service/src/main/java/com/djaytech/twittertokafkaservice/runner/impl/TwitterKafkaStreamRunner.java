@@ -16,17 +16,21 @@ import javax.annotation.PreDestroy;
 import java.util.Arrays;
 
 @Component
-@ConditionalOnProperty(name = "twitter-to-kafka-service.enable-mock-tweets", havingValue = "false")
+@ConditionalOnProperty(name = "twitter-to-kafka-service.enable-mock-tweets", havingValue = "false", matchIfMissing = true)
 public class TwitterKafkaStreamRunner implements StreamRunner {
 
-    private static final Logger LOG =  LoggerFactory.getLogger(TwitterKafkaStatusListener.class);
+    private static final Logger LOG = LoggerFactory.getLogger(TwitterKafkaStreamRunner.class);
+
     private final TwitterToKafkaServiceConfigData twitterToKafkaServiceConfigData;
+
     private final TwitterKafkaStatusListener twitterKafkaStatusListener;
+
     private TwitterStream twitterStream;
 
-    public TwitterKafkaStreamRunner(TwitterToKafkaServiceConfigData configData, TwitterKafkaStatusListener twitterKafkaStatusListener) {
+    public TwitterKafkaStreamRunner(TwitterToKafkaServiceConfigData configData,
+                                    TwitterKafkaStatusListener statusListener) {
         this.twitterToKafkaServiceConfigData = configData;
-        this.twitterKafkaStatusListener = twitterKafkaStatusListener;
+        this.twitterKafkaStatusListener = statusListener;
     }
 
     @Override
@@ -37,9 +41,9 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
     }
 
     @PreDestroy
-    public void shutDown(){
-        if(twitterStream != null){
-            LOG.info("Closing twitter stream");
+    public void shutdown() {
+        if (twitterStream != null) {
+            LOG.info("Closing twitter stream!");
             twitterStream.shutdown();
         }
     }
@@ -48,6 +52,6 @@ public class TwitterKafkaStreamRunner implements StreamRunner {
         String[] keywords = twitterToKafkaServiceConfigData.getTwitterKeywords().toArray(new String[0]);
         FilterQuery filterQuery = new FilterQuery(keywords);
         twitterStream.filter(filterQuery);
-        LOG.info("started filtering twitter stream for keywords {}", Arrays.toString(keywords));
+        LOG.info("Started filtering twitter stream for keywords {}", Arrays.toString(keywords));
     }
 }
